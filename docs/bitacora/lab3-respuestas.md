@@ -28,7 +28,7 @@ Es la huella sha256 del contenido exacto de la imagen. `:latest` es una etiqueta
 
 **7. ¿Qué comando borraría realmente los datos de Oracle? ¿Por qué docker rm oralab-26ai no lo hace?**
 
-`docker volume rm oralab-26ai-data` (o un `docker system prune -a --volumes` con el contenedor parado). `docker rm` solo borra el contenedor, y los archivos de la base están en el volumen montado en `/opt/oracle/oradata`, que sobrevive y se puede montar en un contenedor nuevo con el script 05. Ojo con una cosa que vi al revisar: los datafiles de los TBS_* de V000 se crearon sin ruta y están en `/opt/oracle/product/26ai/dbhomeFree/dbs/`, fuera del volumen, así que esos sí se perderían con un `docker rm`.
+`docker volume rm oralab-26ai-data` (o un `docker system prune -a --volumes` con el contenedor parado). `docker rm` solo borra el contenedor, y los archivos de la base están en el volumen montado en `/opt/oracle/oradata`, que sobrevive y se puede montar en un contenedor nuevo con el script 05. Ojo con una cosa que vi al revisar: los datafiles de los TBS_* de V000 se crearon sin ruta y Oracle los dejó en `/opt/oracle/product/26ai/dbhomeFree/dbs/`. En esta imagen esa carpeta es un enlace simbólico a `/opt/oracle/oradata/dbconfig/FREE/dbs`, así que físicamente están dentro del volumen y sobreviven a un `docker rm`, pero en una carpeta que no es la normal (el resto de la PDB está en `FREE/FREEPDB1`). Lo comprobé en el diagnóstico del Lab 4 y allí se mueven a su sitio.
 
 ## Git, organización y evidencia
 

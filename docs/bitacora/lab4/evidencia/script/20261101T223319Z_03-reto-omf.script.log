@@ -1,0 +1,39 @@
+== 1. Antes: sin destino OMF ==
+
+NAME		     VALUE
+-------------------- ------------------------------
+db_create_file_dest  (vac??o: sin OMF)
+
+1 row selected.
+
+== 2. Destino OMF dentro del volumen: parámetro dinámico, SCOPE = BOTH (ya y tras reiniciar) ==
+
+System altered.
+
+== 3. En FREEPDB1: CREATE TABLESPACE sin cláusula DATAFILE ==
+
+Session altered.
+
+
+NAME		     VALUE
+-------------------- ------------------------------
+db_create_file_dest  /opt/oracle/oradata
+
+1 row selected.
+
+
+Tablespace created.
+
+
+TABLESPA FILE_NAME											    MB AUT
+-------- ------------------------------------------------------------------------------------------ ---------- ---
+TBS_X	 /opt/oracle/oradata/FREE/55E54F210F100828E0630B00580ADFD0/datafile/o1_mf_tbs_x_oghhkj58_.d	   100 YES
+	 bf
+
+
+1 row selected.
+
+== 4. Limpieza: la prueba no se queda en la base ==
+
+Tablespace dropped.
+
