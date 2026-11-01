@@ -1,0 +1,6 @@
+SQL Format Cleared
+== Firmas con más de 50 cursores distintos (candidatas a variables de enlace) ==
+
+    CON_ID                 FIRMA   CURSORES EJECUCIONES MEMORIA_MB EJEMPLO                                                                         
+---------- --------------------- ---------- ----------- ---------- --------------------------------------------------------------------------------
+         3   1863221789280198928        406         406       14.1 SELECT /* lab4_literal */ COUNT(*) FROM admin_academia.aca_estudiantes WHERE est
