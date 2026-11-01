@@ -1,0 +1,4 @@
+c6a247736349b09b92673d3fa69963dcd8c5a88b214c2c45526cb29b413b7d63
+Contenedor oralab-26ai creado.
+CONTAINER ID   IMAGE                                                COMMAND                  CREATED          STATUS                           PORTS                                                                                      NAMES
+c6a247736349   container-registry.oracle.com/database/free:latest   "/bin/bash -c $SCRIP…"   44 seconds ago   Up 1 second (health: starting)   0.0.0.0:1521->1521/tcp, [::]:1521->1521/tcp, 0.0.0.0:8181->8181/tcp, [::]:8181->8181/tcp   oralab-26ai
