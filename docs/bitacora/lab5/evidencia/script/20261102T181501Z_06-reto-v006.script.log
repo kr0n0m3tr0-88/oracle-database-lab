@@ -1,0 +1,34 @@
+== Pregunta 1 · NECESIDAD: Q5, identificar a quien llama (10 por segundo), con los índices de V005 ==
+Q5 hoy			       filas=	   1  lecturas l??gicas=   1486  f??sicas=    0        7 ms
+plan: TABLE ACCESS FULL CLIENTE
+== Pregunta 2 · VIABILIDAD: selectividad de una igualdad sobre TELEFONO ==
+
+    CLAVES PCT_POR_VALOR
+---------- -------------
+    100000	    .001
+== Pregunta 3 · ESCRITURA: 1000 altas de cliente sin el índice ==
+altas sin ix_cli_telefono      filas=  1000  lecturas l??gicas=  11255	bloques modificados= 10166  redo=  1369 KB    32.6 ms  | por fila: 10.2 bloques, 1402 bytes de redo
+== Pregunta 4 · REDUNDANCIA: ¿algún índice de CLIENTE empieza ya por TELEFONO? ==
+
+INDEX_NAME															 COLUMNAS
+-------------------------------------------------------------------------------------------------------------------------------- ----------------------------------------
+IX_CLI_PAIS_CIUDAD														 PAIS, CIUDAD
+PK_CLIENTE															 ID_CLIENTE
+UX_CLI_DNI															 DNI
+UX_CLI_EMAIL															 EMAIL
+== Pregunta 5 · CICLO DE VIDA: se crea INVISIBLE, se comprueba que no cambia nada y después se hace visible ==
+Q5 indice invisible	       filas=	   1  lecturas l??gicas=   1505  f??sicas=    0      6.9 ms
+plan: TABLE ACCESS FULL CLIENTE
+Q5 con ix_cli_telefono	       filas=	   1  lecturas l??gicas=      6  f??sicas=    0       .3 ms
+plan: TABLE ACCESS BY INDEX ROWID BATCHED CLIENTE > BITMAP CONVERSION TO ROWIDS > BITMAP OR > BITMAP CONVERSION FROM ROWIDS > INDEX RANGE SCAN UX_CLI_EMAIL > BITMAP CONVERSION FROM ROWIDS > INDEX
+RANGE SCAN IX_CLI_TELEFONO
+altas con ix_cli_telefono      filas=  1000  lecturas l??gicas=  13245	bloques modificados= 12143  redo=  1597 KB    37.8 ms  | por fila: 12.1 bloques, 1635 bytes de redo
+
+INDEX_NAME															     ALTURA	 HOJAS	       MB
+-------------------------------------------------------------------------------------------------------------------------------- ---------- ---------- ----------
+IX_CLI_TELEFONO 															  2	   294		3
+== Limpieza: el índice de prueba se borra; si se aprueba, lo crea V006 ==
+
+INDICES_CLIENTE
+---------------
+	      4
