@@ -1,0 +1,17 @@
+SQL Format Cleared
+== 1. FRA por encima del umbral (sección 3 del healthcheck). Umbral real: 85 % ==
+
+0 rows selected. 
+
+== 1b. La misma consulta con umbral 0 %, solo para comprobar que dispara ==
+
+ALERTA
+------------------------------------------------------------------------------------------
+ALERTA: FRA al 2.3 % (umbral 0 %)
+
+1 row selected. 
+
+== 2. Ninguna copia RMAN completada en las últimas 24 horas ==
+
+0 rows selected. 
+
