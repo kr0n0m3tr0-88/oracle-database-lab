@@ -1,0 +1,22 @@
+== 1. Tal como viene en el Pull Request, sin índices en teléfono ni apellidos ==
+PR sin indices		       filas=	 981  lecturas l??gicas=   1487  f??sicas=    0     22.5 ms
+plan: TABLE ACCESS FULL CLIENTE
+== 2. Con índices en las dos columnas la consulta rota sigue sin poder usarlos (regla 1 dos veces) ==
+PR con indices		       filas=	 981  lecturas l??gicas=   1487  f??sicas=    0     22.3 ms
+plan: TABLE ACCESS FULL CLIENTE
+== 3. Reescrita: prefijo con LIKE y apellidos tal como se guardan (las dos ramas del OR son sargables) ==
+reescrita OR		       filas=	 981  lecturas l??gicas=    722  f??sicas=    0      4.8 ms
+plan: TABLE ACCESS BY INDEX ROWID BATCHED CLIENTE > BITMAP CONVERSION TO ROWIDS > BITMAP OR > BITMAP CONVERSION FROM ROWIDS > INDEX RANGE SCAN IX_CLI_APELLIDOS > BITMAP CONVERSION FROM ROWIDS > SORT
+ORDER BY > INDEX RANGE SCAN IX_CLI_TELEFONO
+reescrita UNION 	       filas=	 981  lecturas l??gicas=    986  f??sicas=    0        3 ms
+plan: HASH UNIQUE > UNION-ALL > TABLE ACCESS BY INDEX ROWID BATCHED CLIENTE > INDEX RANGE SCAN IX_CLI_TELEFONO > TABLE ACCESS BY INDEX ROWID BATCHED CLIENTE > INDEX RANGE SCAN IX_CLI_APELLIDOS
+== 4. Mismo resultado: filas de cada versión ==
+
+      ROTA  REESCRITA
+---------- ----------
+       981	  981
+== 5. Limpieza de los índices temporales ==
+
+INDICES_TIENDASUR
+-----------------
+		7

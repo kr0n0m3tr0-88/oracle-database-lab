@@ -1,0 +1,18 @@
+== UX_CLI_EMAIL frente a PK_CLIENTE: las dos tienen 100 000 entradas ==
+
+NAME		   HEIGHT    LF_ROWS	LF_BLKS    BR_ROWS    BR_BLKS BYTES_ENTRADA_HOJA BYTES_ENTRADA_RAMA ENTRADAS_POR_HOJA	PCT_USED
+-------------- ---------- ---------- ---------- ---------- ---------- ------------------ ------------------ ----------------- ----------
+UX_CLI_EMAIL		3     100000	    501        500	    3		    35.9	       18.2		  200	      90
+
+NAME		   HEIGHT    LF_ROWS	LF_BLKS    BR_ROWS    BR_BLKS BYTES_ENTRADA_HOJA BYTES_ENTRADA_RAMA ENTRADAS_POR_HOJA	PCT_USED
+-------------- ---------- ---------- ---------- ---------- ---------- ------------------ ------------------ ----------------- ----------
+PK_CLIENTE		2     100000	    187        186	    1		    14.9	       10.9		  535	     100
+== ¿En qué orden llegaron las claves? Primeros clientes por id y su email ==
+
+ID_CLIENTE EMAIL
+---------- ------------------------------------------------------------------------------------------------------------------------
+	 1 cliente1@tiendasur.es
+	 2 cliente2@tiendasur.es
+	 3 cliente3@tiendasur.es
+	 4 cliente4@tiendasur.es
+	 5 cliente5@tiendasur.es

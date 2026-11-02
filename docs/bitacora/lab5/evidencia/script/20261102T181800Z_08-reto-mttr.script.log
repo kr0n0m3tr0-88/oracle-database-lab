@@ -1,0 +1,12 @@
+
+MOMENTO 		   ESTIMATED_MTTR ACTUAL_REDO_BLKS TARGET_REDO_BLKS
+-------------------------- -------------- ---------------- ----------------
+antes				       36	    631752	     663552
+
+MOMENTO 		   ESTIMATED_MTTR ACTUAL_REDO_BLKS TARGET_REDO_BLKS
+-------------------------- -------------- ---------------- ----------------
+justo despues			       36	    644975	     663552
+
+MOMENTO 		   ESTIMATED_MTTR ACTUAL_REDO_BLKS TARGET_REDO_BLKS
+-------------------------- -------------- ---------------- ----------------
+despues de 10 s 		       36	     13721	     663552

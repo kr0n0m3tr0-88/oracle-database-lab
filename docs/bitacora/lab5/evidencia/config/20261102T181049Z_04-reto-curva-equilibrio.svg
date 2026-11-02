@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="470" font-family="sans-serif" font-size="12">
+<rect width="760" height="470" fill="#ffffff"/>
+<text x="380" y="22" text-anchor="middle" font-size="15">Lecturas lógicas para sumar el importe del k % de los pedidos (TiendaSur)</text>
+<line x1="70" y1="40" x2="70" y2="400" stroke="#dddddd"/>
+<text x="70" y="418" text-anchor="middle">0.01 %</text>
+<line x1="230" y1="40" x2="230" y2="400" stroke="#dddddd"/>
+<text x="230" y="418" text-anchor="middle">0.1 %</text>
+<line x1="390" y1="40" x2="390" y2="400" stroke="#dddddd"/>
+<text x="390" y="418" text-anchor="middle">1 %</text>
+<line x1="550" y1="40" x2="550" y2="400" stroke="#dddddd"/>
+<text x="550" y="418" text-anchor="middle">10 %</text>
+<line x1="710" y1="40" x2="710" y2="400" stroke="#dddddd"/>
+<text x="710" y="418" text-anchor="middle">100 %</text>
+<line x1="70" y1="400" x2="710" y2="400" stroke="#dddddd"/>
+<text x="62" y="404" text-anchor="end">1e0</text>
+<line x1="70" y1="341.935" x2="710" y2="341.935" stroke="#dddddd"/>
+<text x="62" y="345.935" text-anchor="end">1e1</text>
+<line x1="70" y1="283.871" x2="710" y2="283.871" stroke="#dddddd"/>
+<text x="62" y="287.871" text-anchor="end">1e2</text>
+<line x1="70" y1="225.806" x2="710" y2="225.806" stroke="#dddddd"/>
+<text x="62" y="229.806" text-anchor="end">1e3</text>
+<line x1="70" y1="167.742" x2="710" y2="167.742" stroke="#dddddd"/>
+<text x="62" y="171.742" text-anchor="end">1e4</text>
+<line x1="70" y1="109.677" x2="710" y2="109.677" stroke="#dddddd"/>
+<text x="62" y="113.677" text-anchor="end">1e5</text>
+<line x1="70" y1="51.6129" x2="710" y2="51.6129" stroke="#dddddd"/>
+<text x="62" y="55.6129" text-anchor="end">1e6</text>
+<text x="390" y="445" text-anchor="middle">k (% de filas, escala logarítmica)</text>
+<text x="18" y="220" text-anchor="middle" transform="rotate(-90 18 220)">lecturas lógicas (escala logarítmica)</text>
+<polyline points="70,184.077 181.835,184.077 230,184.077 278.165,184.077 341.835,184.077 390,184.077 438.165,184.077 501.835,184.077 550,184.077 598.165,184.077 661.835,184.077 710,184.077 " fill="none" stroke="#555555" stroke-width="2" stroke-dasharray="6,4"/>
+<polyline points="70,281.239 181.835,244.42 230,226.445 278.165,208.277 341.835,185.86 390,167.944 438.165,150.317 501.835,127.136 550,109.635 598.165,92.1664 661.835,69.0732 710,51.5812 " fill="none" stroke="#d62728" stroke-width="2"/>
+<polyline points="70,365.042 181.835,350.93 230,339.532 278.165,325.75 341.835,305.747 390,289.498 438.165,272.177 501.835,249.23 550,231.783 598.165,214.335 661.835,191.242 710,173.766 " fill="none" stroke="#1f77b4" stroke-width="2"/>
+<line x1="254.082" y1="40" x2="254.082" y2="400" stroke="#2ca02c" stroke-dasharray="3,3"/>
+<text x="258.082" y="54" fill="#2ca02c">el optimizador cambia a la tabla</text>
+<circle cx="346.627" cy="184.077" r="5" fill="#d62728"/>
+<text x="346.627" y="204.077" fill="#d62728" text-anchor="middle">CF malo = tabla (0.54 %)</text>
+<circle cx="681.582" cy="184.077" r="5" fill="#1f77b4"/>
+<text x="681.582" y="204.077" fill="#1f77b4" text-anchor="middle">CF bueno = tabla (66 %)</text>
+<rect x="80" y="60" width="190" height="62" fill="#ffffff" stroke="#bbbbbb"/>
+<line x1="90" y1="76" x2="120" y2="76" stroke="#d62728" stroke-width="2"/>
+<text x="128" y="80">índice con CF malo</text>
+<line x1="90" y1="94" x2="120" y2="94" stroke="#1f77b4" stroke-width="2"/>
+<text x="128" y="98">índice con CF bueno</text>
+<line x1="90" y1="112" x2="120" y2="112" stroke="#555555" stroke-width="2" stroke-dasharray="6,4"/>
+<text x="128" y="116">tabla entera</text>
+</svg>
